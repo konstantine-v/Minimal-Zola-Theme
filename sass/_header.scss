@@ -1,0 +1,44 @@
+#header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  .logo {
+    font-family: monospace;
+    font-weight: 400;
+
+    a {
+      color: $tertiary-color;
+      font-size: 2em;
+    }
+  }
+
+  .menu {
+    align-self: flex-start;
+    font-family: $decoration-font-family;
+
+    ul {
+      display: inline-block;
+      padding-right: 25px;
+
+      li {
+        display: inline-block;
+        margin-right: 5px;
+        a {
+          color: $tertiary-color;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+@include max-screen() {
+  #header {
+    padding: 1em;
+    display: block;
+    text-align: center;
+    .menu ul {
+      display: grid;
+    }
+  }
+}

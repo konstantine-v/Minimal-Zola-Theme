@@ -1,0 +1,19 @@
+name = "Minimal"
+description = "A Minimal Theme with no JS and very little CSS"
+license = "GPLv2"
+homepage = "https://github.com/materialfuture/minimal-zola-theme"
+min_version = "0.1.2"
+
+[extra]
+even_menu = [
+    {url = "$BASE_URL", name = "Home"},
+    {url = "$BASE_URL/categories", name = "Categories"},
+    {url = "$BASE_URL/tags", name = "Tags"},
+    {url = "$BASE_URL/about", name = "About"},
+]
+even_title = "Minimal"
+
+[author]
+name = "MaterialFuture"
+homepage = "https://konstantinev.com"
+
