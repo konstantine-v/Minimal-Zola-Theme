@@ -15,3 +15,17 @@
         </div>
     </div>
 {% endblock content %}
+
+
+{% block content %}
+<div class="taxonomy">
+    <h2>{{ terms | length }} Tags</h2>
+    {% for tag in terms %}
+    <div class="taxonomy__item">
+        <span class="taxonomy__item__title">
+            <a href="{{ tag.permalink }}">{{ tag.name }}<span class="count">{{ tag.pages | length }}</span></a>
+        </span>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}
