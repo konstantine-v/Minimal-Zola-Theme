@@ -1,14 +1,13 @@
-@import "normalize";
+//Not sure what normalize brings in terms of Compatibility with the minimal amount of CSS already there.
+// @import "normalize";
 
-$theme-color-map: (
-  'Default': #c05b4d #f8f5ec,
+$theme-color-map: ('Default': #c05b4d #f8f5ec,
   'Mint Green': #16982B #f5f5f5,
   'Cobalt Blue': #0047AB #f0f2f5,
   'Hot Pink': #FF69B4 #f8f5f5,
-  'Dark Violet': #9932CC #f5f4fa
-);
+  'Dark Violet': #9932CC #f5f4fa);
 
-// TODO: allow to change that
+// Todo: Better naming of variables, also add widths commonly used
 $main-colour: #3e93ff;
 $secondary-colour: #f8f5ec;
 $tertiary-color: #34495e;
@@ -21,18 +20,18 @@ $code-font-family: monospace !default;
 $decoration-font-family: sans-serif;
 
 @mixin min-screen($min-width: $body-width) {
-   @media screen and (min-width: $min-width) {
-     @content;
-   }
+  @media screen and (min-width: $min-width) {
+    @content;
+  }
 }
 
 @mixin max-screen($max-width: $body-width) {
-   @media screen and (max-width: $max-width) {
-     @content;
-   }
+  @media screen and (max-width: $max-width) {
+    @content;
+  }
 }
 
 @import "base";
 @import "header";
 @import "main";
-// @import "toc";
+// @import "toc"; //Do I need TOC?
