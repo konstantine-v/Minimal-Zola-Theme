@@ -6,8 +6,9 @@
     {% for category in terms %}
     <div class="taxonomy__item">
         <span class="taxonomy__item__title">
-            <a href="{{ category.permalink }}"> {{ category.name }} <span class="count">{{ category.pages | length }}</span></a>
+            <a href="{{ category.permalink }}"> {{ category.name }} <span class="count">- ({{ category.pages | length }})</span></a>
         </span>
+        <hr>
     </div>
     {% endfor %}
 </div>
