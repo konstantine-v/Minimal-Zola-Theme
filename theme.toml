@@ -1,8 +1,8 @@
 name = "Minimal"
-description = "A Minimal Theme with no JS and very little CSS"
-license = "GPLv2"
-homepage = "https://github.com/materialfuture/minimal-zola-theme"
-min_version = "0.1.2"
+description = "A very Minimal Theme with no JS and very little CSS"
+license = "MIT"
+homepage = "https://gitlab.com/MaterialFuture/minimal-zola-theme"
+min_version = "0.1.4"
 
 [extra]
 even_menu = [

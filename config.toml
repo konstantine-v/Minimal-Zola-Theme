@@ -1,5 +1,24 @@
-# The URL the site will be built for
-# base_url = "https://zola-even.netlify.com"
+base_url = "https://konstantinev.com"
+compile_sass = true
+highlight_code = true
+build_search_index = false
+theme = "minimal-zola-theme"
+base_lang = "en_US"
+site_img = "test.png"
+
+# SEO
+keywords = "Whatever, SEO, keywords, you want"
+
+# RSS
+title = "Your RSS Feed"
+description = "This is my portfolio site, blog, etc..."
+default_language = "en"
+generate_rss = true
+
+taxonomies = [
+    {name = "categories", rss = true},
+    {name = "tags", rss = true},
+]
 
 compile_sass = true
 title = "even theme"
@@ -19,5 +38,11 @@ even_menu = [
     {url = "$BASE_URL/tags", name = "Tags"},
     {url = "$BASE_URL/about", name = "About"},
 ]
+katex_enable = false
 
+#Homepage Stuff - You'll see this on the homepage
+homepage_content = [
+    {content = "<h2>Welcome<h2/>"},
+    {content = "<p>Another One</p>"},
+]
 even_title = "Konstantine V"
