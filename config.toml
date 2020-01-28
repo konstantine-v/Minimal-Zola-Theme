@@ -42,7 +42,6 @@ katex_enable = false
 
 #Homepage Stuff - You'll see this on the homepage
 homepage_content = [
-    {content = "<h2>Welcome<h2/>"},
-    {content = "<p>Another One</p>"},
+    {content = "Another One"},
 ]
 even_title = "Konstantine V"
