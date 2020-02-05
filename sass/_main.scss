@@ -265,6 +265,11 @@ main {
 
     &__title a {
       color: $main-colour;
+
+      & .count {
+        padding-left: .5rem;
+        font-size: .7rem;
+      }
     }
   }
 }

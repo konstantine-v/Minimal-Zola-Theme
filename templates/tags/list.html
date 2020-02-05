@@ -7,7 +7,7 @@
     <div class="tags__item">
         {% for tag in terms %}
         <span class="tags__item__title">
-            <a href="{{ tag.permalink }}">#{{ tag.name }}<span class="count"> ({{ tag.pages | length }})</span></a>
+            <a href="{{ tag.permalink }}">#{{ tag.name }}<span class="count">({{ tag.pages | length }})</span></a>
         </span>
         {% endfor %}
     </div>
