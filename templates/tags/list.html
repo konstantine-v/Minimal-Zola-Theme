@@ -1,15 +1,15 @@
 {% extends "index.html" %}
 
 {% block content %}
-<div class="taxonomy">
+<div class="tags">
     <h2>{{ terms | length }} Tags</h2>
-    {% for tag in terms %}
-    <div class="taxonomy__item">
-        <span class="taxonomy__item__title">
-            <a href="{{ tag.permalink }}">{{ tag.name }}<span class="count"> - ({{ tag.pages | length }})</span></a>
+    <p>These are the tags used for all pages and posts so if you're looking for a particular subject you can find that here.</p>
+    <div class="tags__item">
+        {% for tag in terms %}
+        <span class="tags__item__title">
+            <a href="{{ tag.permalink }}">#{{ tag.name }}<span class="count"> ({{ tag.pages | length }})</span></a>
         </span>
-        <hr>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
 {% endblock content %}
