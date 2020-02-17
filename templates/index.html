@@ -11,7 +11,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <link rel="alternate" href="{{ config.title }}" hreflang="en-US">
     <link rel="alternate" href="{{ config.title }}/es/" hreflang="es-ES">
-    <title>{{ config.title }}</title>
+    <title>
+        {% if page.title %}
+            {{ page.title }} |
+        {% endif %}
+        {{ config.title }}
+    </title>
     <meta name="Description" content="{{config.description}}">
     <link rel="canonical" href="{{config.base_url}}">
     <meta name="keywords" content="{site.keywords}">
@@ -29,7 +34,7 @@
 <body>
     <div class="container">
         <header id="header">
-            <div class="logo"><a href="{{ config.base_url }}">{{ config.extra.even_title }}</a></div>
+            <div class="logo"><a rel="icon author" href="{{ config.base_url }}">{{ config.extra.even_title }}</a></div>
             <nav class="menu">
                 <ul>
                     {% for i in config.extra.even_menu %}

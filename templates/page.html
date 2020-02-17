@@ -1,14 +1,10 @@
 {% extends "index.html" %}
 {% import "post_macros.html" as post_macros %}
-
 {{config.title}} - {{page.title}}
 
 {% block content %}
-
-
 <article class="post">
     {{ post_macros::title(page=page) }}
-
     {% if toc %}
     <div class="post-toc" id="post-toc">
         <h2 class="post-toc-title">Contents</h2>
@@ -46,7 +42,7 @@
         {% if page.taxonomies.tags %}
         <div class="post-tags">
             {% for tag in page.taxonomies.tags %}
-            <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}">#{{ tag }}</a>
+            <a rel="tag" href="{{ get_taxonomy_url(kind="tags", name=tag) }}">#{{ tag }}</a>
             {% endfor %}
         </div>
         {% endif %}
