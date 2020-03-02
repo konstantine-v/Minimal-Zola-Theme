@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+
+{% block content %}
+<h1>{{page.title | safe}}</h1>
+<div class="about">
+  {{ page.content | safe }}
+
+  {% set books = load_data(path="content/assets/books.csv") %}
+  <table>
+    <tr>
+      <th>Status</th>
+      <th>Title</th>
+      <th>Author</th>
+    </tr>
+    {% for book in books.records %}
+      <tr>
+        <td>
+          {%if book[0] == "c"%}
+          <span style="color:darkgreen">Read</span>
+          {%elif book[0] == "r"%}
+          <span style="color:darkkhaki">Reading</span>
+          {%endif%}
+        </td>
+        <td>{{book[1]}}</td>
+        <td>{{book[2]}}</td>
+      </tr>
+    {% endfor %}
+
+  </table>
+</div>
+
+
+{% endblock content %}
