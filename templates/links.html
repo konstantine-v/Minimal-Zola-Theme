@@ -1,0 +1,52 @@
+{% extends "index.html" %}
+
+{% block content %}
+<h1>{{page.title | safe}}</h1>
+<div class="about">
+  {{ page.content | safe }}
+
+  {% set links = load_data(path="content/assets/link-archive.csv") %}
+  <table>
+    <tr>
+      <th>Category</th>
+      <th>Title</th>
+    </tr>
+    {% for link in links.records %}
+      <tr>
+        <td>
+          {%if link[0] == "cr"%}
+          <span style="color:darkslateblue">Crystal Lang</span>
+          {%elif link[0] == "r"%}
+          <span style="color:darkmagenta">Ruby</span>
+          {%elif link[0] == "ph"%}
+          <span>Philosophy</span>
+          {%elif link[0] == "b"%}
+          <span>Blog</span>
+          {%elif link[0] == "c"%}
+          <span style="color:dodgerblue">C/C++</span>
+          {%elif link[0] == "d"%}
+          <span>Design</span>
+          {%elif link[0] == "em"%}
+          <span>Emacs</span>
+          {%elif link[0] == "v"%}
+          <span>Vi/Vim</span>
+          {%elif link[0] == "md"%}
+          <span>Markdown</span>
+          {%elif link[0] == "m"%}
+          <span>Misc.</span>
+          {%elif link[0] == "sql"%}
+          <span>SQL</span>
+          {%elif link[0] == "d"%}
+          <span>Data/Databases</span>
+
+          {%endif%}
+        </td>
+        <td><a href="{{link[2]}}">{{link[1]}}</a></td>
+      </tr>
+    {% endfor %}
+
+  </table>
+</div>
+
+
+{% endblock content %}
