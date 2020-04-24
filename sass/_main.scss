@@ -75,6 +75,7 @@ main {
       max-width: 100%;
       margin: 10px 0;
       border-spacing: 0;
+      border: 1px solid grey;
       box-shadow: 2px 2px 3px rgba(0, 0, 0, .125);
 
       thead {
@@ -89,6 +90,11 @@ main {
 
       tr:hover {
         background-color: $secondary-colour;
+        color: $body-background !important;
+      }
+
+      td:hover {
+        color: $body-background;
       }
     }
 
@@ -136,7 +142,7 @@ main {
         }
 
         &:hover {
-          color: $main-colour;
+          color: $body-background;
         }
       }
     }
@@ -257,6 +263,9 @@ main {
   margin: 2em 0;
 
   &__item {
+    margin: 0 0 7px 0;
+    padding: 0 0 7px 0;
+    border-bottom: 2px solid #8a8a8a;
 
     &__time {
       margin-right: 10px;
