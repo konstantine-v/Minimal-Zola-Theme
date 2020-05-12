@@ -1,8 +1,6 @@
 {% import "post_macros.html" as post_macros %}
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     {% block title %}
     <meta charset="utf-8">
@@ -11,8 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <link rel="alternate" href="{{ config.title }}" hreflang="en-US">
     <link rel="alternate" href="{{ config.title }}/es/" hreflang="es-ES">
-    <title>
-        {% if page.title %}
+    <title>{% if page.title %}
             {{ page.title }} |
         {% endif %}
         {{ config.title }}
@@ -30,7 +27,6 @@
     {% block extra_head %}
     {% endblock extra_head %}
 </head>
-
 <body>
     <div class="container">
         <header id="header">
@@ -38,9 +34,7 @@
             <nav class="menu">
                 <ul>
                     {% for i in config.extra.even_menu %}
-                    <li>
-                        <a href="{{ i.url | replace(from="$BASE_URL", to=config.base_url) }}">{{ i.name }}</a>
-                    </li>
+                    <li><a href="{{ i.url | replace(from="$BASE_URL", to=config.base_url) }}">{{ i.name }}</a></li>
                     {% endfor %}
                 </ul>
             </nav>
@@ -48,10 +42,24 @@
         <main>
             <div class="content">
                 {% block content %}
-                <!-- <h2>Welcome</h2>
-                     {% for j in config.extra.homepage_content %}
-                     <p>{{ j.content}}</p>
-                     {% endfor %} -->
+                <h1>Welcome,</h1>
+                <div class="about">
+                    <h2 id="who-am-i">Who Am I?</h2>
+                    <p><a href="/wiki/materialfuture" title="Materialfuture - Understand where the name comes from and means to me.">MaterialFuture</a>
+                        /<span style="border-bottom:1px dotted">
+                        <span title="/ˈ/: primary stress follows">ˈ</span><span title="'m' in 'My'">m</span><span title="'a' in 'About'">ə</span><span title="t: 't' in 'tie'">t</span><span title="'e' in 'histortic'">ɪ</span><span title="'r' in 'rye'">r</span><span title="'e' in 'histortic'">ɪ</span><span title="'a' in 'About'">ə</span><span title="'l' in 'lie'">l</span>
+                        <span title="'f' in 'rye'">f</span><span title="'u' in 'rye'">j</span><span title="'t' in 'rye'">t</span><span title="'u' in 'tour'">ʊə</span><span title="'r' in 'rye'">r</span></span>/ -  A programmer, UX Researcher, Writer, SysAdmin, and Web Developer. I create software that helps people's lives easier without comprimizing on their <a href="https://www.gnu.org/philosophy/linux-gnu-freedom.en.html" title="Linux, GNU, and Freedom - Richard Stallman" rel="external opener nofollow" target="_blank">freedoms</a>. I also write articles regarding my life as well as what I've learned in my professional life.</p>
+                    <h2 id="my-work">My Work</h2>
+                    <p>I mainly work on offline-compatible application that require's very little from the user to get working. Examples of software projects I'm working on are listed <a href="/projects">on the projects page</a>.</p>
+                    <p>For non-software related work, I research User Experience and write papers in regards to that. You can read my <a href="/papers">papers here</a> or you can search the tags of my posts and find any <a href="/tags">relevant tags</a> regarding my writings.</p>
+                    <h2 id="my-goals">My Goals</h2>
+                    <p>My goals are constantly changing as I want to constantly improve so there's no end-goal just a constantly and consistant pursuit towards bettering myself and others. I focus primarily on offline application and technologies and hope by end of 2020 to have the services that I use to be either decentralized and in my control or be offline only. The reason for this is too long to write here, so I'll link to a blog post when the time comes.</p>
+                    <h2 id="this-site">This Site</h2>
+                    <p>This site was initially a place for me to put my blog posts and links to things, but that has since changed. This site is also a personal wiki for personal and public use that defines different aspects of what I do.
+                        You can consider this part Blog/Wiki/Resource for all of what I do.</p>
+                    <p>I also try and provide links to software alternative as well as useful links for people to link to and share. </p>
+                    <p>This site is offline capable, running nicely on Lynx, and contains an RSS feed for posts.</p>
+                </div>
                 {% endblock content %}
                 Lost? Don't know where to start? Just go to the <a href='/links'>Links</a> page.
             </div>
@@ -60,5 +68,4 @@
         {% endblock footer %}
     </div>
 </body>
-
 </html>
