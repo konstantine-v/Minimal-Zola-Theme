@@ -16,9 +16,11 @@
       <tr>
         <td>
           {%if book[0] == "c"%}
-          <span style="color:darkgreen">Read</span>
+          <span style="color:limegreen">Read</span>
           {%elif book[0] == "r"%}
-          <span style="color:darkkhaki">Reading</span>
+          <span style="color:yellow">Reading</span>
+          {%elif book[0] == "d"%}
+          <span style="color:red">Dropped</span>
           {%endif%}
         </td>
         <td>{{book[1]}}</td>
