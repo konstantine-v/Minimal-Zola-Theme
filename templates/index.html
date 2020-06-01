@@ -45,19 +45,21 @@
                 <h1>Welcome Traveler,</h1>
                 <div class="about">
                     <h2 id="who-am-i">Who Am I?</h2>
-                    <p><a href="/wiki/materialfuture" title="Materialfuture - Understand where the name comes from and means to me.">MaterialFuture</a>
+                    <p><a href="{{ get_url(path="wiki/materialfuture") }}" title="Materialfuture - Understand where the name comes from and means to me.">MaterialFuture</a>
                         <span style="border-bottom:1px dotted">
                         <span title="/ˈ/: primary stress follows">ˈ</span><span title="'m' in 'My'">m</span><span title="'a' in 'About'">ə</span><span title="t: 't' in 'tie'">t</span><span title="'e' in 'histortic'">ɪ</span><span title="'r' in 'rye'">r</span><span title="'e' in 'histortic'">ɪ</span><span title="'a' in 'About'">ə</span><span title="'l' in 'lie'">l</span>
-                        <span title="'f' in 'rye'">f</span><span title="'u' in 'rye'">j</span><span title="'t' in 'rye'">t</span><span title="'u' in 'tour'">ʊə</span><span title="'r' in 'rye'">r</span></span>/ -  A programmer, UX Researcher, Writer, SysAdmin, and Web Developer. I create software that helps people's lives easier without comprimizing on their <a href="https://www.gnu.org/philosophy/linux-gnu-freedom.en.html" title="Linux, GNU, and Freedom - Richard Stallman" rel="external opener nofollow" target="_blank">freedoms</a>. I also write articles regarding my life as well as what I've learned in my professional life.</p>
+                        <span title="'f' in 'rye'">f</span><span title="'u' in 'rye'">j</span><span title="'t' in 'rye'">t</span><span title="'u' in 'tour'">ʊə</span><span title="'r' in 'rye'">r</span></span>/ -  A programmer, UX Researcher, Writer, SysAdmin, and Web Developer. I create software that helps people's lives easier without compromising on their <a href="https://www.gnu.org/philosophy/linux-gnu-freedom.en.html" title="Linux, GNU, and Freedom - Richard Stallman" rel="external opener nofollow" target="_blank">freedoms</a>. I also write articles regarding my life as well as what I've learned in my professional life.</p>
                     <h2 id="my-work">My Work</h2>
-                    <p>I work primarily on offline-focused applications and technologies that requires very little from the user to get working. Examples of software projects I'm working on are listed <a title="List of current projects I'm working on here." href="/projects">on the projects page</a>.</p>
-                    <p>For non-software related work, I'm a User Experience researcher and write papers in regards to that. You can read my <a title="List of public papers I have written here." href="/papers">papers here</a> or you can search the tags of my posts and find any <a title="Search posts by tags and find relevant ones to read." href="/tags">relevant tags</a> regarding my writings.</p>
+                    <p>I work primarily on offline-focused applications and technologies that requires very little from the user to get working. In my work I've utilized Javascript and Crystal Lang to create offline and online applications. Examples of software projects I'm working on are listed <a title="List of current projects I'm working on here." href="{{ get_url(path="projects") }}">on the projects page</a> or on <a title="List of what I've previously worked on listed here with links." href="{{ get_url(path="portfolio") }}">the portfolio page</a>.</p>
+                    <p>For non-software related work, I'm a User Experience researcher and write papers in regards to that. You can read my <a title="List of public papers I have written here." href="{{ get_url(path="papers") }}">papers here</a> or you can search the tags of my posts and find any <a title="Search posts by tags and find relevant ones to read." href="{{ get_url(path="tags") }}">relevant tags</a> regarding my writings.</p>
                     <h2 id="my-goals">My Goals</h2>
                     <p>My goals are constantly changing as I want to constantly improve so there's no end-goal just a constant and consistent pursuit towards bettering myself and others.</p>
                     <h2 id="this-site">This Site</h2>
-                    <p>This site was initially a place for me to put my blog posts and links to things, but that has since changed. This site is also a personal <a title="Link to my personal wiki that defines different projects and terms I may use." href="https://materialfuture.net/wiki">wiki</a> for personal and public use that defines different aspects of what I do. You can consider this site part Blog/Wiki/Resource for all of what I do.</p>
+                    <p>This site was initially a place for me to put my blog posts and links to things, but that has since changed. This site is also a personal <a title="Link to my personal wiki that defines different projects and terms I may use." href="{{ get_url(path="wiki") }}">wiki</a> for personal and public use that defines different aspects of what I do. You can consider this site part Blog/Wiki/Resource for all of what I do.</p>
                     <p>I also try and provide links to software alternative as well as useful links for people to link to and share. </p>
-                    <p>This site is offline capable, running nicely on Lynx, and contains an RSS feed for posts.</p>
+                    <p>This site is offline capable, running nicely on Lynx, and contains an RSS feed for posts, try it out.</p>
+                    <br>
+                    <p>If you're looking to contact me, read the <a title="Trying to email me? Read this." href="{{ get_url(path="contact") }}">contact me page</a>.</p>
                 </div>
                 {% endblock content %}
             </div>
@@ -70,13 +72,11 @@
             &#9642;
             <a title="Library, where I store data regarding books I've read." class="btm-icn" href="https://materialfuture.net/library">&#128218;</a>
             &#9642;
-            <a title="Merveilles Town Mastodon profile." class="btm-icn" href="https://merveilles.town/@materialfuture">&#128491;</a>
+            <a title="MaterialFuture.net RSS Feed for all posts." class="btm-icn" href="{{ get_url(path="rss.xml") }}"><svg style="margin-bottom:-4px" xmlns="http://www.w3.org/2000/svg" id="RSSicon" viewBox="0 0 8 8" width="25" height="25"><title>RSS feed icon</title><desc>RSS Feed Icon for this site's blog feed.</desc><style type="text/css">.button{stroke:none;fill:none}.symbol{stroke:none;fill:white} </style><rect class="button" width="8" height="8" rx="1.5"/><circle class="symbol" cx="2" cy="6" r="1"/><path class="symbol" d="m 1,4 a 3,3 0 0 1 3,3 h 1 a 4,4 0 0 0 -4,-4 z"/><path class="symbol" d="m 1,2 a 5,5 0 0 1 5,5 h 1 a 6,6 0 0 0 -6,-6 z"/></svg></a>
             &#9642;
-            <a title="MaterialFuture.net RSS Feed for all posts." class="btm-icn" href="{{ get_url(path="rss.xml") }}">
-                <svg style="margin-bottom:-4px" xmlns="http://www.w3.org/2000/svg" id="RSSicon" viewBox="0 0 8 8" width="25" height="25"><title>RSS feed icon</title><style type="text/css">.button{stroke:none;fill:none}.symbol{stroke:none;fill:white} </style><rect class="button" width="8" height="8" rx="1.5"/><circle class="symbol" cx="2" cy="6" r="1"/><path class="symbol" d="m 1,4 a 3,3 0 0 1 3,3 h 1 a 4,4 0 0 0 -4,-4 z"/><path class="symbol" d="m 1,2 a 5,5 0 0 1 5,5 h 1 a 6,6 0 0 0 -6,-6 z"/></svg>
-            </a>
+            <a title="Merveilles Town Mastodon profile." class="btm-icn" href="https://merveilles.town/@materialfuture"><img style="width:30px;height:30px" alt="Merveilles Town Mastodon profile" src='{{ get_url(path="merv.svg") }}'/></a>
             &#9642;
-            <a href='https://webring.xxiivv.com/#random' class="btm-icn" target='_blank'><img style="width:30px;height:30px" src='https://webring.xxiivv.com/icon.white.svg'/></a>
+            <a href='https://webring.xxiivv.com/#random' class="btm-icn" target='_blank'><img style="width:30px;height:30px" alt="XXIIV webring" src='{{ get_url(path="webring.svg") }}'/></a>
             &#9642;
             Konstantine Anthony (@MaterialFuture) © 2020
         </footer>
