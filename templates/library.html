@@ -23,7 +23,13 @@
           <span style="color:red">Dropped</span>
           {%endif%}
         </td>
-        <td>{{book[1]}}</td>
+        <td>
+          {%if book[4]%}
+            <a title="Post regarding {{book[1]}}" href="{{config.base_url}}{{book[4]}}">{{book[1]}}</a>
+          {%else%}
+            {{book[1]}}
+          {%endif%}
+        </td>
         <td>{{book[2]}}</td>
       </tr>
     {% endfor %}
