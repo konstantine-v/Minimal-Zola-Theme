@@ -85,12 +85,11 @@ main {
       }
 
       tr:hover {
-        background-color: $secondary-colour;
+        background: $main-colour;
         color: $body-background !important;
-      }
-
-      td:hover {
-        color: $body-background;
+        & a {
+          color: $body-background !important;
+        }
       }
     }
 
@@ -281,12 +280,14 @@ main {
     line-height: 3em;
 
     &__title a {
-      color: white;
+      color: black;
       background: $main-colour;
       padding: .5rem;
       margin: 0 .5rem 0 0;
       border-radius: .5rem;
-
+      &:hover {
+        background: #ccc;
+      }
       & .count {
         padding-left: .5rem;
         font-size: .7rem;
