@@ -41,38 +41,21 @@
         </header>
         <main>
             <div class="content">
+                <!-- Allow homepage to render from content/_index.md -->
+                {% if section %}
+                    {% set page = section %}
+                {% endif %}
+
+                <!-- Here's where content will be placed -->
                 {% block content %}
-                <h1>Welcome Traveler,</h1>
-                <div class="about">
-                    <h2 id="who-am-i">Who Am I?</h2>
-                    <p>MaterialFuture
-                        <span style="border-bottom:1px dotted">
-                        <span title="/ˈ/: primary stress follows">ˈ</span><span title="'m' in 'My'">m</span><span title="'a' in 'About'">ə</span><span title="t: 't' in 'tie'">t</span><span title="'e' in 'histortic'">ɪ</span><span title="'r' in 'rye'">r</span><span title="'e' in 'histortic'">ɪ</span><span title="'a' in 'About'">ə</span><span title="'l' in 'lie'">l</span>
-                        <span title="'f' in 'rye'">f</span><span title="'u' in 'rye'">j</span><span title="'t' in 'rye'">t</span><span title="'u' in 'tour'">ʊə</span><span title="'r' in 'rye'">r</span></span>/ -  A jack-of-all trades and a digital nomad in the 21st century. <br/><a href="/about/" title="Link to my about me page where you can learn more about me">Read more about me on my about page</a>.</p>
-                    <p>I work primarily on offline-focused applications and technologies. Examples of projects I'm working on are listed <a title="List of current projects I'm working on here." href="http:&#x2F;&#x2F;127.0.0.1:1111&#x2F;projects">on the projects page</a> or on <a title="List of what I've previously worked on listed here with links." href="http:&#x2F;&#x2F;127.0.0.1:1111&#x2F;portfolio">the portfolio page</a>.</p>
-                    <p>For my User Experience research work you can read my <a title="List of public papers I have written here." href="http:&#x2F;&#x2F;127.0.0.1:1111&#x2F;papers">papers here</a> or you can search the tags of my posts and find any <a title="Search posts by tags and find relevant ones to read." href="http:&#x2F;&#x2F;127.0.0.1:1111&#x2F;tags">relevant tags</a> regarding my writings.</p>
-                    <h2 id="my-goals">My Goals</h2>
-                    <p>My goals are simple.</p>
-                    <ul>
-                        <li>Create products people want or need</li>
-                        <li>Focus on the real world use cases of such products as to not reinvent the wheel</li>
-                        <li>Write about my endevours as to help others on their path to their goals</li>
-                    </ul>
-                    <p>If you want to see what I'm up to at the moment check out my <a href="/now" title="Now Page - See what I'm up to">Now page</a> where I update infrequently.</p>
-                    <h2 id="this-site">This Site</h2>
-                    <p>This site is a blog, a wiki, and a hub for all the things I work on. Consider it the documentation to my life. Feel free to explore and get a better idea of who I am and what I do.</p>
-                    <br>
-                    <p>If you're looking to contact me or to hire me then please read the <a title="Trying to contact me? Go to this page to read more about how you can." href="http:&#x2F;&#x2F;127.0.0.1:1111&#x2F;contact">contact me page</a>.</p>
-                </div>
                 {% endblock content %}
             </div>
         </main>
         <footer>
-            <p>Lost? Don't know where to start? Just go to the <a title="Links page where you find out more about what's on the site." href='/links'>Links</a> page.</p>
-            <p>Want to get in touch? Refer to my <a title="Contact Me page where you can get in touch with me in the fashion of an FAQ." href='/contact'>contact me</a> page.</p>
-            <a title="Links page where you find out more about what's on the site." href="https://materialfuture.net/links">Sitemap</a> ▪ <a title="Custom Git Site built using Gitea." href="https://git.materialfuture.net">Gitea</a> ▪ <a title="MaterialFuture.net RSS Feed for all posts." href="{{ get_url(path="rss.xml") }}">RSS</a> ▪ <a title="Merveilles Town Mastodon profile." href="https://merveilles.town/@materialfuture">Merveilles Town</a> ▪ <a href='https://webring.xxiivv.com/' target='_blank'>XXIIV Webring</a> ▪ <a title="Trying to contact me via email? Click here." href='{{ get_url(path="contact") }}'>Email</a>
+            <p>Lost? Don't know where to start? Just go to the <a title="Links page where you find out more about what's on the site." href='{{ get_url(path="links") }}'>Links</a> page.</p>
+            <p>Want to get in touch? Refer to my <a title="Contact Me page where you can get in touch with me in the fashion of an FAQ." href='{{ get_url(path="contact") }}'>contact me</a> page.</p>
+            <a title="Links page where you find out more about what's on the site." href='{{ get_url(path="links") }}'>Sitemap</a> ▪ <a title="Custom Git Site built using Gitea." href="https://git.materialfuture.net">Gitea</a> ▪ <a title="MaterialFuture.net RSS Feed for all posts." href="{{ get_url(path="rss.xml") }}">RSS</a> ▪ <a title="Merveilles Town Mastodon profile." href="https://merveilles.town/@materialfuture">Merveilles Town</a> ▪ <a href='https://webring.xxiivv.com/' target='_blank'>XXIIV Webring</a> ▪ <a title="Trying to contact me via email? Click here." href='{{ get_url(path="contact") }}'>Email</a>
             <br/>@MaterialFuture ©2020
-        </footer>
         </footer>
     </div>
 </body>
