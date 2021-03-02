@@ -3,13 +3,16 @@
 {% block content %}
     <div class="taxonomy">
         <h2>{{ term.name }}</h2>
-        {% for page in term.pages %}
+        {% for year, posts in term.pages | group_by(attribute="year") %}
+          <h3>{{ year }}</h3>
+          {% for page in posts %}
             <div class="taxonomy__item">
                 <span class="taxonomy__item__time">{{ page.date | date(format="%F") }}</span>
                 <span class="taxonomy__item__title">
                     <a href="{{ page.permalink }}">{{ page.title }}</a>
                 </span>
             </div>
+          {% endfor %}
         {% endfor %}
     </div>
 {% endblock content %}
