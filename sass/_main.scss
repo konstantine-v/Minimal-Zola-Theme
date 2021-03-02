@@ -1,10 +1,6 @@
 main {
   clear: both;
 
-  .content {
-    padding: 0 20px;
-  }
-
   .posts {
     margin-bottom: 20px;
     border-bottom: 1px solid #e6e6e6;
@@ -256,9 +252,15 @@ main {
   margin: 2em 0;
 
   &__item {
-    margin: 0 0 7px 0;
-    padding: 0 0 7px 0;
-    border-bottom: 2px solid #8a8a8a;
+    margin: 0 0 5px 0;
+    padding: 0 0 5px 0;
+
+    .count {
+      background: $main-colour;
+      color: $body-background;
+      border-radius: 15px;
+      padding: 3px 7px;
+    }
 
     &__time {
       margin-right: 10px;
