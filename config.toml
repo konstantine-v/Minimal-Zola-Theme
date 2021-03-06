@@ -1,4 +1,4 @@
-base_url = "https://konstantinev.com"
+base_url = "https://your.site"
 compile_sass = true
 highlight_code = true
 build_search_index = false
@@ -37,11 +37,8 @@ even_menu = [
     {url = "$BASE_URL/categories", name = "Categories"},
     {url = "$BASE_URL/tags", name = "Tags"},
     {url = "$BASE_URL/about", name = "About"},
+    {url = "$BASE_URL/rss.xml", name = "RSS"},
 ]
 katex_enable = false
 
-#Homepage Stuff - You'll see this on the homepage
-homepage_content = [
-    {content = "Another One"},
-]
-even_title = "Konstantine V"
+even_title = "Site Name"
