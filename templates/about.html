@@ -1,7 +1,7 @@
 {% extends "index.html" %}
 {% block content %}
-    <h1>{{page.title | safe}}</h1>
-    <div class="about">
+    <h1 style="margin-bottom:0;">{{page.title | safe}}</h1>
+    <div class="about" style="padding-top:0;">
         {{ page.content | safe }}
     </div>
 {% endblock content %}
